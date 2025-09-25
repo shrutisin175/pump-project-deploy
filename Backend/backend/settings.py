@@ -13,9 +13,11 @@ if os.environ.get('RENDER'):
 else:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 
-if os.environ.get('RENDER'):
+# Database configuration
+if os.environ.get('RENDER') and os.environ.get('DATABASE_URL'):
     DATABASES = {
         'default': dj_database_url.config(
+            default=os.environ.get('DATABASE_URL'),
             conn_max_age=600,
             conn_health_checks=True,
         )
