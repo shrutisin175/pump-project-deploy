@@ -4,7 +4,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-)ah(1&%$268++g$2ne@9jker0$iu8fpfo%lg^5d^1przdq(956'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-)ah(1&%$268++g$2ne@9jker0$iu8fpfo%lg^5d^1przdq(956')
 
 DEBUG = True
 
@@ -116,6 +116,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'shaftnseal@gmail.com'
-EMAIL_HOST_PASSWORD = 'dkjiozteqlhhqyct'
-DEFAULT_FROM_EMAIL = 'shaftnseal@gmail.com'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER', '')
