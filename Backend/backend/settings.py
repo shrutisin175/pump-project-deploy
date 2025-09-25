@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://pump-project-deploy.vercel.app/",  
+    "https://pump-project-deploy.vercel.app",  
     "https://*.vercel.app",  
     "http://localhost:5173",
     "http://localhost:3000",
@@ -100,10 +100,10 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://pump-project-deploy.vercel.app",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
