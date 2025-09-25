@@ -167,3 +167,4 @@ dmypy.json
 .pyre/
 
 DEPLOYMENT_GUIDE.md
+.vercel

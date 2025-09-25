@@ -1,3 +1,5 @@
+import os
+import dj_database_url
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -6,7 +8,25 @@ SECRET_KEY = 'django-insecure-)ah(1&%$268++g$2ne@9jker0$iu8fpfo%lg^5d^1przdq(956
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+if os.environ.get('RENDER'):
+    ALLOWED_HOSTS = ['https://pump-backend-7kss.onrender.com']
+else:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
+
+if os.environ.get('RENDER'):
+    DATABASES = {
+        'default': dj_database_url.config(
+            conn_max_age=600,
+            conn_health_checks=True,
+        )
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -21,8 +41,20 @@ INSTALLED_APPS = [
     'pump_spares',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://pump-project-deploy.vercel.app/",  
+    "https://*.vercel.app",  
+    "http://localhost:5173",
+    "http://localhost:3000",
+]
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
