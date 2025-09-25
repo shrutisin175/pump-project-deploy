@@ -1,0 +1,467 @@
+.pump-quote-container {
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.no-data-message {
+  text-align: center;
+  padding: 100px 20px;
+  background: white;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.no-data-message h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.no-data-message p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #0056b3;
+}
+
+.quote-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.back-arrows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-arrows:hover {
+  color: #007bff;
+}
+
+.back-arrows svg {
+  font-size: 18px;
+}
+
+.quote-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background: #17a2b8;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #138496;
+}
+
+.save-btn {
+  background: #28a745;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #218838;
+}
+
+.print-btn {
+  background: #6f42c1;
+  color: white;
+}
+
+.print-btn:hover {
+  background: #5a32a3;
+}
+
+.download-btn {
+  background: #fd7e14;
+  color: white;
+}
+
+.download-btn:hover {
+  background: #e8690b;
+}
+
+.quote-document {
+  background: white;
+  margin: 0 20px 20px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  line-height: 1.6;
+}
+
+.quote-header-section {
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 30px;
+}
+
+.company-header h1 {
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.company-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.quote-info h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.quote-details {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.detail-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.detail-row .label {
+  font-weight: 600;
+  color: #555;
+}
+
+.detail-row .value {
+  color: #333;
+  font-weight: 500;
+}
+
+.customer-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.editable-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.customer-input,
+.customer-textarea {
+  padding: 12px 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.customer-input:focus,
+.customer-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.customer-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.customer-info {
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.customer-name {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.customer-address {
+  color: #666;
+  line-height: 1.5;
+}
+
+.divider {
+  height: 2px;
+  background: #e9ecef;
+  margin: 30px 0;
+}
+
+.offer-details-section h3,
+.commercial-terms-section h3,
+.payment-terms-section h3,
+.warranty-terms-section h3,
+.other-conditions-section h3 {
+  color: #1e3a8a;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.offer-details-section p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.parts-table-container {
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.parts-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+  border: 1px solid #dee2e6;
+}
+
+.parts-table th {
+  background: #f8f9fa;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border: 1px solid #dee2e6;
+}
+
+.parts-table td {
+  padding: 15px;
+  border: 1px solid #dee2e6;
+  vertical-align: top;
+}
+
+.parts-table tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.part-description {
+  line-height: 1.4;
+}
+
+.part-description strong {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.part-details {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.total-row {
+  background: #e3f2fd !important;
+  font-weight: 600;
+}
+
+.total-label {
+  text-align: right;
+  color: #1976d2;
+}
+
+.total-value {
+  color: #1976d2;
+  font-size: 1.1rem;
+}
+
+.price-breakdown {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #28a745;
+}
+
+.price-breakdown p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.commercial-terms-section ol,
+.payment-terms-section ul,
+.warranty-terms-section ul,
+.other-conditions-section ul {
+  padding-left: 20px;
+}
+
+.commercial-terms-section li,
+.payment-terms-section li,
+.warranty-terms-section li,
+.other-conditions-section li {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.closing-section {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid #e9ecef;
+}
+
+.closing-section p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.company-signature {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.company-signature p {
+  margin: 8px 0;
+  color: #333;
+}
+
+.signature-line {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.signature-line p {
+  margin: 15px 0;
+  color: #666;
+}
+
+/* Print Styles */
+@media print {
+  .quote-header,
+  .back-arrows,
+  .quote-actions {
+    display: none;
+  }
+  
+  .quote-document {
+    margin: 0;
+    padding: 20px;
+    box-shadow: none;
+  }
+  
+  .pump-quote-container {
+    background: white;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quote-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .quote-actions {
+    justify-content: center;
+  }
+  
+  .quote-document {
+    padding: 20px;
+    margin: 0 10px 20px;
+  }
+  
+  .company-header h1 {
+    font-size: 2rem;
+  }
+  
+  .quote-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .quote-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .parts-table {
+    min-width: 600px;
+  }
+  
+  .parts-table th,
+  .parts-table td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-document {
+    padding: 15px;
+    margin: 0 5px 20px;
+  }
+  
+  .company-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .quote-info h2 {
+    font-size: 1.3rem;
+  }
+  
+  .action-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}

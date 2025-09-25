@@ -1,0 +1,301 @@
+.inventory-container-com {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  padding-top: 190px; /* Add padding to account for navbar height (120px logo + 20px padding + 20px margin + 30px original padding) */
+  font-family: 'Segoe UI', sans-serif;
+  color: #0f172a;
+  line-height: 1.7;
+  background: #f9fafb;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.inventory-container-com:hover {
+  transform: translateY(-8px);
+}
+
+.inventory-container-heading-com {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0f2644;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(15, 38, 68, 0.3);
+}
+
+.inventory-container-head-com {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+  position: relative;
+  padding-left: 30px;
+}
+
+.inventory-container-head-com::before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5rem;
+  color: #0f2644;
+}
+
+.inventory-container-paragh-com {
+  font-size: 1.2rem;
+  margin-bottom: 1.6rem;
+  color: #334155;
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+.inventory-container-list-com {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #1e293b;
+}
+
+.inventory-container-list-com li {
+  position: relative;
+  margin-bottom: 0.9rem;
+  font-size: 1.1rem;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 12px 40px 12px 40px;
+  box-shadow: 0 3px 10px rgba(30, 64, 175, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.inventory-container-list-com li:hover {
+  background-color: #e2e8f0;
+  box-shadow: 0 5px 15px rgba(30, 64, 175, 0.2);
+}
+
+.inventory-container-list-com li::before {
+  content: "✔";
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  font-weight: bold;
+  color: #1e40af;
+  font-size: 1.2rem;
+}
+
+
+.inventory-heading-button {
+  background-color: #0f2644;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.inventory-heading-button:hover {
+  background-color: white;
+  color: #0f2644;
+  border: 2px solid #ff7043;
+}
+
+.inventory-heading-button h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+
+/* Responsive - Tablet */
+@media (max-width: 1200px) {
+  .inventory-container-heading-com {
+    font-size: 2.6rem;
+  }
+
+  .inventory-container-head-com {
+    font-size: 1.3rem;
+    padding-left: 28px;
+  }
+
+  .inventory-container-paragh-com {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+
+  .inventory-container-list-com li {
+    font-size: 1.05rem;
+    padding: 10px 30px 10px 40px;
+  }
+
+  .social-icons {
+    font-size: 1.8rem;
+    gap: 25px;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .inventory-container-com {
+    padding: 20px 15px;
+    border-radius: 10px;
+  }
+
+  .inventory-container-heading-com {
+    font-size: 1.8rem;
+  }
+
+  .inventory-container-head-com {
+    font-size: 1rem;
+    padding-left: 24px;
+  }
+
+  .inventory-container-paragh-com {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .inventory-container-list-com li {
+    font-size: 0.95rem;
+    padding: 10px 15px 10px 35px;
+  }
+
+  .inventory-container-list-com li::before {
+    left: 12px;
+    top: 10px;
+  }
+
+  .footer-energy-saving-page {
+    font-size: 0.85rem;
+  }
+
+  .social-icons {
+    font-size: 1.4rem;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .social-icons a {
+    padding: 5px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* Login Card Styles */
+.login-card-container {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 2rem !important;
+}
+
+.login-card {
+  background: white !important;
+  border-radius: 20px !important;
+  padding: 2.5rem !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+  max-width: 500px !important;
+  width: 100% !important;
+  border: 1px solid #e2e8f0 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.login-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+}
+
+.login-card-title {
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: #1e3a8a !important;
+  margin-bottom: 0.5rem !important;
+  text-align: center !important;
+}
+
+.login-card-subtitle {
+  font-size: 1rem !important;
+  color: #64748b !important;
+  margin-bottom: 2rem !important;
+  text-align: center !important;
+  line-height: 1.5 !important;
+}
+
+.login-card-features {
+  margin-bottom: 2rem !important;
+}
+
+.login-card-features .feature-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 0.8rem !important;
+  font-size: 1rem !important;
+  color: #475569 !important;
+  font-weight: 500 !important;
+}
+
+.login-card-button {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 1rem 2rem !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3) !important;
+  width: 100% !important;
+  margin-bottom: 1rem !important;
+}
+
+.login-card-button:hover {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.4) !important;
+}
+
+.login-card-footer {
+  font-size: 0.9rem !important;
+  color: #64748b !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+
+.login-card-footer span {
+  color: #1e3a8a !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+  transition: color 0.3s ease !important;
+}
+
+.login-card-footer span:hover {
+  color: #1e40af !important;
+}
+
+/* Debug styles to ensure visibility */
+.need-spares-section {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.need-spares-heading {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #1e3a8a !important;
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+}
