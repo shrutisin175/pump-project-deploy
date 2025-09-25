@@ -9,7 +9,7 @@ SECRET_KEY = 'django-insecure-)ah(1&%$268++g$2ne@9jker0$iu8fpfo%lg^5d^1przdq(956
 DEBUG = True
 
 if os.environ.get('RENDER'):
-    ALLOWED_HOSTS = ['https://pump-backend-7kss.onrender.com']
+    ALLOWED_HOSTS = ['pump-backend-7kss.onrender.com']
 else:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 
@@ -54,7 +54,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -83,13 +83,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 AUTH_PASSWORD_VALIDATORS = []
 
 REST_FRAMEWORK = {
@@ -105,7 +98,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -124,6 +116,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'shrutisin175@gmail.com'
-EMAIL_HOST_PASSWORD = 'YOUR_NEW_16_CHARACTER_APP_PASSWORD_HERE'
-DEFAULT_FROM_EMAIL = 'shrutisin175@gmail.com'
+EMAIL_HOST_USER = 'shaftnseal@gmail.com'
+EMAIL_HOST_PASSWORD = 'dkjiozteqlhhqyct'
+DEFAULT_FROM_EMAIL = 'shaftnseal@gmail.com'
